@@ -160,10 +160,9 @@ int main()
             }
             else if (strcmp(token, "-") == 0)
             {
+                // change directory to previous directory
                 chdir(getenv("OLDPWD"));
-                // printf("%s\n", getcwd(buffer, buffSize));
-                size_t bufferSize = 4096;
-                getPwd(bufferSize);
+                printf("%s\n", getenv("PWD"));
             }
 
             else if (strcmp(token, "-P") == 0)
