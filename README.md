@@ -18,7 +18,7 @@
             1. if an operand is missing, e.g. filename after mkdir
             2. if a directory cannot be created because it already exists
 
-    3. rm :
+    3. rm : removes a file
         - ```-i``` : prompts before removal
         - ```-v``` : informs after removal
 
@@ -28,16 +28,16 @@
             3. if an invalid option is passed into rm
 
 
-    4. cat :
-        - ```-n``` :
-        - ```-E``` :
+    4. cat : prints the contents of a file
+        - ```-n``` : prints line numbers
+        - ```-E``` : prints $ at the end of each line
 
         - Corner Cases Defended
             1. if the user tries to open a file or directory that doesn't exist
             2. if the user passes an invalid option
 
 
-    5. date :
+    5. date : prints the current date and time
         - ```-u``` : time in gmt
         - ```-R``` : time in rfc 5322 format
 
@@ -47,7 +47,7 @@
 
 
 - internal commands supported:
-    1. cd :
+    1. cd : changes the current working directory
         - ```-``` : goes to previous working directory
         - ```-P``` : symbolic link components shall be resolved before dot-dot components are processed
         - ```-L``` : symbolic link components shall not be resolved before dot-dot components are processed
@@ -58,7 +58,7 @@
             2. passes an invalid number of arguments
 
 
-    2. pwd :
+    2. pwd : prints the current working directory
         - ```-L``` : follow symlinks
         - ```-P``` : dont follow symlinks
 
@@ -67,13 +67,16 @@
             2. invalid option
 
 
-    3. echo :
+    3. echo : prints the arguments passed to it
         - ```--help``` : print help
         - ```-n``` : removes newline
 
         - Corner Cases Defended
             1. invalid option
             2. invalid command
+    
+    4. exit :
+        - exits the shell
 
 ## Use of fork() and exec()
 
