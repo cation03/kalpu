@@ -6,11 +6,7 @@
 void removeFile(char *path)
 {
     int confirm = remove(path);
-    if (confirm == 0)
-    {
-        printf("rm: removed '%s'\n", path);
-    }
-    else
+    if (confirm != 0)
     {
         printf("rm: cannot remove '%s': No such file or directory\n", path);
     }

@@ -1,3 +1,4 @@
+## Running Kalpesh (The Shell)
 - type "make" after cloning the repo and cding into it
 - run ```./kalpesh```
 - external commands supported:

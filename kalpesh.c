@@ -161,12 +161,22 @@ int main()
             else if (strcmp(token, "-") == 0)
             {
                 chdir(getenv("OLDPWD"));
-                printf("%s\n", getenv("PWD"));
+                // printf("%s\n", getcwd(buffer, buffSize));
+                size_t bufferSize = 4096;
+                printf("%s\n", getPwd(bufferSize));
             }
 
             else if (strcmp(token, "-P") == 0)
             {
                 token = strtok(NULL, " ");
+                if (token == NULL)
+                {
+                    chdir(getenv("HOME"));
+                }
+                else
+                {
+                    chdir(token);
+                }
             }
 
             else if (strcmp(token, "-L") == 0)
