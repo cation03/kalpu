@@ -163,7 +163,7 @@ int main()
                 chdir(getenv("OLDPWD"));
                 // printf("%s\n", getcwd(buffer, buffSize));
                 size_t bufferSize = 4096;
-                printf("%s\n", getPwd(bufferSize));
+                getPwd(bufferSize);
             }
 
             else if (strcmp(token, "-P") == 0)
